@@ -6,7 +6,6 @@ class shopping_cart():
         self.email=email
         self.address=address
         self.cart={}
-
     @classmethod
     def display_products(cls):
         print("Product Available in the shop are:")
@@ -15,7 +14,6 @@ class shopping_cart():
         for product in cls.list_of_products:
             print(product,cls.list_of_products[product][0],cls.list_of_products[product][1])
         print()
-
     def display_details(self):
         print("Your details are:")
         print()
@@ -102,6 +100,9 @@ Enter Your option: ''') )
                 break
             else:
                 print("Invalid option! Please choose again")
-             
-c1=shopping_cart("Dhivakar",7603822936,"dhivakarhiva1903@gmail.com","Thiruvaiyaru")
-c1.main()
+name=input("Enter a Name: ")
+age=int(input("Enter a Age: "))
+email=input("Enter a Email Id: ")
+address=input("Enter a Address: ")    
+customer1=shopping_cart(name,age,email,address)
+customer1.main()
